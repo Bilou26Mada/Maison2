@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivage Sport Club - Performance & Esprit d'Équipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --sport-gold: #D4AF37;
+        }
+
+        .hero-sport {
+            padding: 140px 0 80px;
+            background: #0a0a0a;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .hero-sport img.main-logo {
+            max-width: 450px;
+            width: 85%;
+            margin-bottom: 30px;
+        }
+
+        .hero-sport p {
+            color: var(--sport-gold);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .section-running {
+            padding: 100px 0;
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .running-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .running-image {
+            height: 500px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .running-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section-sponsoring {
+            padding: 100px 0;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        .sponsoring-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .sponsoring-intro img {
+            max-width: 120px;
+            margin-bottom: 30px;
+        }
+
+        .disciplines-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .discipline-card {
+            position: relative;
+            height: 350px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .discipline-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: 0.5s;
+        }
+
+        .discipline-card:hover img {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .discipline-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        }
+
+        .discipline-overlay h4 {
+            color: var(--sport-gold);
+            font-size: 1.5rem;
+        }
+
+        .extra-disciplines {
+            padding: 60px 0;
+            background: #000;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .extra-disciplines p {
+            color: #888;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+        }
+
+        .back-nav {
+            padding: 60px 0;
+            text-align: center;
+            background: #000;
+        }
+
+        .back-nav a {
+            color: var(--sport-gold);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .running-grid,
+            .disciplines-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .running-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header" class="scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><span class="logo-text">MAISON RIVAGE</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#hero">GROUPE</a></li>
+                    <li><a href="index.html#activities">ACTIVITÉS</a></li>
+                    <li><a href="index.html#etablissements">ÉTABLISSEMENTS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-sport">
+            <div class="container">
+                <img src="assets/activities/sport-club/identity/h_white_color.png" alt="Rivage Sport Club"
+                    class="main-logo fade-in">
+                <p class="fade-in delay-1">Performance • Cohésion • Engagement local</p>
+            </div>
+        </section>
+
+        <section class="section-running container">
+            <div class="running-grid">
+                <div class="fade-in">
+                    <img src="assets/activities/sport-club/identity/v_black_color.png" alt="Club Signature"
+                        style="max-width: 150px; margin-bottom: 30px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Notre Club de Running</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #444;">
+                        Plus qu'un simple groupe de coureurs, le Rivage Sport Club est une communauté dédiée à la
+                        performance et au bien-être.
+                        Nous organisons des sessions régulières sur le littoral de Cherbourg, alliant l'effort au cadre
+                        exceptionnel du Cotentin.
+                    </p>
+                </div>
+                <div class="running-image fade-in delay-1">
+                    <img src="assets/activities/sport-club/hero_running.png" alt="Running sessions Cherbourg">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-sponsoring">
+            <div class="container">
+                <div class="sponsoring-intro">
+                    <img src="assets/activities/sport-club/identity/v_white_color.png" alt="Sport Club Seal">
+                    <h2>Sponsoring & Soutien</h2>
+                    <p style="color: var(--sport-gold); margin-top: 10px;">Nous accompagnons les talents et les clubs
+                        qui font vibrer notre région.</p>
+                </div>
+
+                <div class="disciplines-grid">
+                    <div class="discipline-card fade-in">
+                        <img src="assets/activities/sport-club/kite_surf.png" alt="Kite Surf">
+                        <div class="discipline-overlay">
+                            <h4>Kite Surf</h4>
+                        </div>
+                    </div>
+                    <div class="discipline-card fade-in delay-1">
+                        <img src="assets/activities/sport-club/water_polo.png" alt="Water Polo">
+                        <div class="discipline-overlay">
+                            <h4>Water Polo</h4>
+                        </div>
+                    </div>
+                    <div class="discipline-card fade-in delay-2">
+                        <div
+                            style="background: #222; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <img src="assets/activities/sport-club/identity/h_white.png" alt="Moto"
+                                style="max-width: 200px; opacity: 0.3;">
+                        </div>
+                        <div class="discipline-overlay">
+                            <h4>Sports Mécaniques</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="extra-disciplines">
+            <div class="container">
+                <p>HANDBALL • MOTO • ATHLÉTISME • SOUTIEN AUX ÉVÉNEMENTS LOCAUX</p>
+            </div>
+        </section>
+
+        <section class="back-nav">
+            <a href="index.html#sportsclub">← RETOUR VERS MAISON RIVAGE</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Groupe Maison Rivage - Sport Club</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

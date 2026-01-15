@@ -1,0 +1,192 @@
+{
+  "site_internet": {
+    "nom": "Groupe MAISON RIVAGE",
+    "structure": {
+      "volet_du_haut": {
+        "zone": "Menu de navigation",
+        "elements": [
+          {
+            "menu": "Groupe : Page d'accueil"
+          },
+          {
+            "menu": "Activités",
+            "sous_menus": [
+              "Hospitality",
+              "Franchise",
+              "Création (Type Mirage - Vice - Cartel)",
+              "Evénementiel"
+            ]
+          },
+          {
+            "menu": "Sport Club"
+          },
+          {
+            "menu": "Etablissements",
+            "liste_detaillee": [
+              {
+                "nom": "Le Vice City",
+                "details": [
+                  "Photos / Vidéos",
+                  "Présentations",
+                  "Adresse",
+                  "Contact Managers",
+                  "Capacité ?",
+                  "Réseaux",
+                  "Privatisations"
+                ]
+              },
+              {
+                "nom": "Le Cartel"
+              },
+              {
+                "nom": "Mirage"
+              },
+              {
+                "nom": "Les Burgers de Colette",
+                "action": "LIEN vers site du franchiseur",
+                "url": "https://www.lesburgersdecolette.fr/restaurants/cherbourg"
+              },
+              {
+                "nom": "Madame",
+                "action": "Lien vers site du franchiseur"
+              }
+            ]
+          },
+          {
+            "menu": "Actualités",
+            "sous_menus": [
+              "Ouvertures",
+              "Evénements"
+            ]
+          },
+          {
+            "menu": "Engagement",
+            "points_cles": [
+              "Vie locale",
+              "Fournisseurs locaux",
+              "Produits frais",
+              "Valeurs du service",
+              "Dynamique de centre ville",
+              "SPORT CLUB"
+            ]
+          },
+          {
+            "menu": "Recrutement",
+            "actions": [
+              "Mail RH",
+              "Poste à pourvoir"
+            ]
+          },
+          {
+            "menu": "Contact",
+            "contenu": [
+              "Trombinoscope",
+              "Carrières : présentation des postes de direction et des personnes à contacter par domaine d'activité"
+            ]
+          }
+        ]
+      },
+      "page_d_accueil": {
+        "zone": "Corps de page",
+        "niveau_primaire": {
+          "colonnes": [
+            {
+              "titre": "Rivage Restaurants",
+              "action": "Doit mener vers",
+              "etablissement": "Madame",
+              "fonctionnalites": {
+                "section": "Réservations et Menus",
+                "details": [
+                  "Module Zanchet à intégrer comme chez mammaprimi pour réservation",
+                  "Bons Cadeaux"
+                ]
+              }
+            },
+            {
+              "titre": "Rivage Franchise",
+              "action": "Doit mener vers",
+              "etablissement": "Les Burgers de Colette",
+              "localisation": "Place",
+              "liens": "liens vers sites du franchiseur, établissements de Cherbourg"
+            },
+            {
+              "titre": "Rivage Boire et Manger",
+              "action": "Doit mener vers",
+              "etablissements": [
+                "Le Vice City",
+                "Le Cartel",
+                "Mirage"
+              ],
+              "fonctionnalites": {
+                "section": "Réservations et Menus",
+                "details": [
+                  "Module réservation Wis"
+                ]
+              }
+            },
+            {
+              "titre": "Rivage Evénements",
+              "sous_sections": [
+                {
+                  "type": "Programmation Evénementielle Interne",
+                  "exemples": "(DJ Set - Stand Up - Événements Food Festival - etc.)",
+                  "integration": "Lien Vers Shotgun si Gros Event à billetterie OU Intégration Shotgun ?"
+                },
+                {
+                  "type": "Offre Événementielle Externe",
+                  "services": [
+                    "Traiteur Food",
+                    "Traiteur Beverages",
+                    "Prestataire Musical (Sono / DJ)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "niveau_secondaire": {
+          "sections": [
+            {
+              "titre": "Rivage Sports Club",
+              "activites": [
+                "Club de Running",
+                "Sponsoring (Moto, Kite, Hand, Water Polo, etc.)"
+              ]
+            },
+            {
+              "titre": "Carte des établissements",
+              "description": "type vue maps ou vue comme dans l'identité de groupe réalisées par VALP"
+            }
+          ]
+        }
+      },
+      "bas_de_page": {
+        "zone": "Footer",
+        "adresse": "Maison Rivage Cherbourg-en-Cotentin France",
+        "liens_rapides": [
+          "Carrières",
+          "Contact",
+          "Mentions Légales"
+        ],
+        "suivez_nous": {
+          "reseaux_sociaux": {
+            "Instagram_Facebook": [
+              "Maison Rivage",
+              "Le Vice City",
+              "Le Cartel",
+              "Mirage",
+              "Madame",
+              "Rivage Sport Club"
+            ],
+            "TikTok": [
+              "Le Vice City"
+            ],
+            "Linkedin": [
+              "Maison Rivage"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

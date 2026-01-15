@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirage - Groupe MAISON RIVAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .activity-content {
+            padding: 100px 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-sub {
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-sub::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-sub h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 4rem;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--font-heading);
+            letter-spacing: 0.1em;
+        }
+
+        .logo-display {
+            margin-top: 2rem;
+        }
+
+        .logo-display img {
+            max-width: 150px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header" class="scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo"><span class="logo-text">MAISON RIVAGE</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#hero">GROUPE</a></li>
+                    <li><a href="index.html#activities">ACTIVITÉS</a></li>
+                    <li><a href="index.html#etablissements">ÉTABLISSEMENTS</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-sub" style="background-image: url('assets/activities/mirage/hero.jpg');">
+            <h1>Mirage</h1>
+        </section>
+
+        <section class="activity-content container">
+            <div class="text-center">
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8;">
+                    Mirage, l'adresse incontournable de la vie nocturne à Cherbourg. Un environnement lounge et club
+                    élégant pour vos soirées d'exception.
+                </p>
+
+                <div class="logo-display">
+                    <img src="assets/activities/mirage/logo.png" alt="Mirage Logo">
+                </div>
+
+                <div class="gallery">
+                    <img src="assets/activities/mirage/gallery_1.jpg" alt="Mirage Gallery 1">
+                </div>
+
+                <a href="index.html#mirage" class="back-link">← Retour aux établissements</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Groupe Maison Rivage</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
