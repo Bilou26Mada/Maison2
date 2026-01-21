@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe MAISON RIVAGE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">MAISON RIVAGE</span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">GROUPE</a></li>
+                    <li class="has-dropdown">
+                        <a href="#activities">ACTIVITÉS</a>
+                        <ul class="dropdown">
+                            <li><a href="madame.html">Hospitality</a></li>
+                            <li><a href="burgers-de-colette.html">Franchise</a></li>
+                            <li><a href="#etablissements">Création</a></li>
+                            <li><a href="evenementiel.html">Événementiel</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sport-club.html">SPORT CLUB</a></li>
+                    <li class="has-dropdown">
+                        <a href="#etablissements">ÉTABLISSEMENTS</a>
+                        <ul class="dropdown">
+                            <li class="nav-brand-vice"><a href="le-vice-city.html">Le Vice City</a></li>
+                            <li class="nav-brand-cartel"><a href="le-cartel.html">Le Cartel</a></li>
+                            <li class="nav-brand-mirage"><a href="mirage.html">Mirage</a></li>
+                            <li class="nav-brand-colette"><a href="burgers-de-colette.html">Les Burgers de Colette</a>
+                            </li>
+                            <li class="nav-brand-madame"><a href="madame.html">Madame</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#news">ACTUALITÉS</a>
+                        <ul class="dropdown">
+                            <li><a href="#ouvertures">Ouvertures</a></li>
+                            <li><a href="#evenements">Événements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#engagements">ENGAGEMENT</a></li>
+                    <li><a href="#recrutement">RECRUTEMENT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-carousel">
+                <div class="slide active" style="background-image: url('assets/hero_food.png');"></div>
+                <div class="slide" style="background-image: url('assets/hero_interior.png');"></div>
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <!-- Logo Replacement (Official Vector) -->
+                <div class="hero-logo-container fade-in-up">
+                    <svg class="official-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 732.28 323.53">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #333332;
+                                }
+
+                                .cls-2 {
+                                    fill: #fff;
+                                }
+
+                                .cls-3 {
+                                    fill: #232770;
+                                }
+
+                                .cls-4 {
+                                    fill: #ff78c1;
+                                }
+
+                                .cls-5 {
+                                    fill: #ff5961;
+                                }
+
+                                .cls-6 {
+                                    fill: #247d40;
+                                }
+                            </style>
+                        </defs>
+                        <g>
+                            <g>
+                                <path class="cls-2"
+                                    d="M66.13,207.39c15.92-4.27,34.9-15.64,34.9-45.58,0-25.68-18.54-43.61-45.09-43.61H0v156.93h29.2v-65.25l1.74.08c.41.03.69,0,.97-.03.31-.03.64-.06,1.07-.06h.89l43.36,65.25h37.01l-50.49-67.1,2.37-.64ZM38.72,191.31c-2.75,0-5.6,0-8.02-.22l-1.51-.14v-49.72h15.69c15.94,0,25.46,8.57,25.46,22.92,0,18.03-10.64,27.17-31.62,27.17Z" />
+                                <rect class="cls-2" x="132.46" y="118.2" width="29.2" height="156.93" />
+                                <polygon class="cls-2"
+                                    points="297.89 118.2 256.45 217.94 253.6 217.94 211.94 118.2 179.24 118.2 247.51 275.13 261.69 275.13 329.75 118.2 297.89 118.2" />
+                                <path class="cls-2"
+                                    d="M358.22,118.2l-69.3,156.93h29.51l14.03-32.55h66.61l13.18,32.55h30.39l-65.77-156.93h-18.64ZM341.89,219.62l23.28-55.49h2.65l22.15,55.49h-48.09Z" />
+                                <path class="cls-2"
+                                    d="M526.1,192.38v22.82h42.49l-.21,1.85c-2.44,21.72-20.61,36.32-45.22,36.32-30.4,0-52.46-23.04-52.46-54.79,0-34.3,20.82-57.35,51.82-57.35,18.29,0,33.64,9.09,43.38,25.63l25.47-12.54c-15.02-24.73-40.1-38.87-69.06-38.87-47.93,0-82.71,34.87-82.71,82.92s34.16,79.53,81.23,79.53c24.07,0,44.36-8.04,58.68-23.25,14.63-15.54,21.7-37.04,20.51-62.27h-73.92Z" />
+                                <polygon class="cls-2"
+                                    points="703.78 142.94 703.78 118.2 621.03 118.2 621.03 275.13 703.78 275.13 703.78 250.4 650.22 250.4 650.22 205.21 700.8 205.21 700.8 181.54 650.22 181.54 650.22 142.94 703.78 142.94" />
+                            </g>
+                            <g>
+                                <path class="cls-2"
+                                    d="M227.42,66.53h8.75c4.47,0,5.1.94,5.1,4.53v26.38h7.77v-30.91h8.75c4.46,0,5.16.94,5.16,4.53v26.38h39.37c2.66-.61,5.01-1.94,6.44-3.68v3.68h75.26c2.66-.61,5.01-1.94,6.44-3.68v3.68h71.52v-30.91h9.22c4.46,0,5.1.94,5.1,4.53v26.38h14.43v-5.48h-6.66v-20.95c0-6.71-3.88-10.95-11.71-10.95-4.41,0-7.88,1.53-10.55,4.36v-3.88h-14.2v5.53h6.66v25.9h-19.12c.93-1.69,1.54-3.6,1.54-5.89v-14.06c0-7.83-5.56-12.36-15.93-12.36s-15.88,4.53-15.88,12.36v14.06c0,2.28.62,4.19,1.55,5.89h-15.17c.62-1.31.96-2.78.96-4.42v-.65c0-6.77-3.88-8.77-13.44-11.24-8.46-2.12-9.85-2.76-9.85-5.59v-1.65c0-2.23.87-3.12,5.22-3.12h9.85v7.65h7.65v-3.82c0-6.18-4.63-9.47-14.72-9.47s-15.42,4.12-15.42,10.77v.65c0,6.77,3.82,8.71,13.39,11.18,8.52,2.11,9.85,2.76,9.85,5.65v1.65c0,2.35-.87,3.24-5.33,3.24h-10.2v-7.77h-7.65v3.82c0,1.15.2,2.17.51,3.12h-16.58v-31.43h-14.37v5.53h6.66v25.86h-21.58v-21.47c0-6.65-5.42-10.84-15.13-10.84s-14.31,3.58-14.31,9.51v3.89h7.57v-7.57h9.2c3.68,0,5.01.82,5.01,3.99v3.27l-14.01,4.29c-7.67,2.35-8.79,5.01-8.79,10.53v.51c0,1.43.2,2.76.61,3.88,0,.02.02.02.02.04h-15.74v-20.95c0-6.71-3.88-10.95-11.82-10.95-4.35,0-7.94,1.59-10.66,4.48-1.97-2.83-5.45-4.48-10.32-4.48-4.46,0-7.94,1.53-10.61,4.36v-3.88h-14.2v5.53h6.66v25.9h-6.66v5.48h14.37v-30.91ZM412.54,70.18c0-3.53,1.45-4.71,5.8-4.71h4.93c4.35,0,5.8,1.18,5.8,4.71v17.72c0,3.53-1.45,4.71-5.8,4.71h-4.93c-4.35,0-5.8-1.18-5.8-4.71v-17.72ZM293.53,86.19c0-2.35.72-3.37,4.29-4.4l10.74-3.27v13.6h-10.02c-4.19,0-5.01-1.02-5.01-3.88v-2.05Z" />
+                                <rect class="cls-2" x="337.22" y="50.1" width="8.23" height="5.87" />
+                            </g>
+                            <path class="cls-2"
+                                d="M725.17,135.69c-2.26,0-4.02-.74-5.25-2.24-1.24-1.49-1.86-3.6-1.86-6.32s.62-5.03,1.86-6.59c1.24-1.56,2.99-2.34,5.25-2.34s4.02.78,5.25,2.34,1.86,3.76,1.86,6.59-.62,4.83-1.86,6.32c-1.24,1.49-2.99,2.24-5.25,2.24ZM725.17,133.75c1.59,0,2.83-.58,3.7-1.74.87-1.16,1.31-2.79,1.31-4.88,0-2.22-.44-3.94-1.31-5.16-.87-1.22-2.11-1.83-3.7-1.83s-2.83.61-3.7,1.83c-.87,1.22-1.31,2.94-1.31,5.16,0,2.1.44,3.72,1.31,4.88.87,1.16,2.11,1.74,3.7,1.74ZM722.05,130.89v-7.98h1.99v7.98h-1.99ZM723.86,128.33v-1.64h1.91c.36,0,.64-.1.84-.28.2-.19.3-.45.3-.79s-.1-.61-.3-.79c-.2-.18-.48-.28-.84-.28h-2.16v-1.64h2.16c.96,0,1.7.23,2.22.69.52.46.78,1.14.78,2.01s-.26,1.5-.78,1.98c-.52.48-1.26.72-2.22.72h-1.91ZM726.62,130.89l-1.41-2.67,1.91-.34,1.82,3.01h-2.32Z" />
+                        </g>
+                        <g>
+                            <path class="cls-3"
+                                d="M323.63,9.29L314.35.01l-9.28,9.28v11.9c5.67-2.84,12.6-2.76,18.17.3h0c.13.07.27.12.4.19v-12.39h-.01Z" />
+                            <path class="cls-6"
+                                d="M388.58.01l-9.26,9.26h.01v12.39c.12-.06.24-.1.36-.17h0c5.57-3.06,12.5-3.14,18.17-.3v-11.9L388.58.01Z" />
+                            <path class="cls-5"
+                                d="M332.94,0l-9.29,9.29v12.39c5.71,2.97,12.77,2.92,18.41-.19h0s.09-.04.13-.06c0,0,.01,0,.02,0v-12.13l-9.27-9.29Z" />
+                            <path class="cls-4"
+                                d="M379.31,9.28l-9.25-9.28-9.29,9.29-.02,12.14s.09.04.13.06h0c5.66,3.11,12.74,3.16,18.46.17v-12.37h-.01Z" />
+                            <path class="cls-1"
+                                d="M351.5,0l-9.29,9.29v12.13c5.71-3.08,12.83-3.07,18.54,0h0s.02-12.14.02-12.14l-9.27-9.29Z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="stats fade-in-up delay-2">
+                    <div class="stat-item">
+                        <span class="number">5</span>
+                        <span class="label">Établissements</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">1</span>
+                        <span class="label">Sport Club</span>
+                    </div>
+                </div>
+                <a href="#activities" class="btn btn-primary fade-in-up delay-3">Découvrir nos activités</a>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="control prev" aria-label="Previous Slide">&larr;</button>
+                <div class="indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="control next" aria-label="Next Slide">&rarr;</button>
+            </div>
+        </section>
+
+        <!-- Activities Section - Niveau Primaire (4 colonnes) -->
+        <section id="activities" class="activities-section-grid">
+            <article class="activity-card" id="hospitality"
+                style="background-image: url('assets/activity_hospitality.png');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Rivage Restaurants</h2>
+                    <p>Restaurant Madame - Réservations et menus</p>
+                    <a href="madame.html" class="btn btn-outline">Découvrir</a>
+                </div>
+            </article>
+
+            <article class="activity-card" id="franchise"
+                style="background-image: url('assets/activity_franchise.png');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Rivage Franchise</h2>
+                    <p>Les Burgers de Colette - Cherbourg</p>
+                    <a href="burgers-de-colette.html" class="btn btn-outline">Découvrir</a>
+                </div>
+            </article>
+
+            <article class="activity-card" id="creation" style="background-image: url('assets/news_opening.png');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Rivage Boire et Manger</h2>
+                    <p>Le Vice City • Le Cartel • Mirage</p>
+                    <a href="#etablissements" class="btn btn-outline">Nos établissements</a>
+                </div>
+            </article>
+
+            <article class="activity-card" id="evenementiel" style="background-image: url('assets/news_wishes.png');">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>Rivage Événements</h2>
+                    <p>Programmation • Traiteur • Prestation musicale</p>
+                    <a href="evenementiel.html" class="btn btn-outline">En savoir plus</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section Secondaire -->
+        <section id="sportsclub" class="secondary-section">
+            <div class="container">
+                <div class="secondary-grid">
+                    <article class="secondary-card"
+                        style="background-image: url('assets/activities/sport-club/hero_running.png'); background-size: cover; background-position: center; position: relative; border: none;">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6); z-index: 1;"></div>
+                        <div style="position: relative; z-index: 2;">
+                            <img src="assets/activities/sport-club/identity/h_white_color.png" alt="Rivage Sport Club"
+                                style="max-width: 200px; margin-bottom: 20px;">
+                            <p>L'excellence sportive à Cherbourg-en-Cotentin</p>
+                            <a href="sport-club.html" class="btn btn-outline"
+                                style="border-color: #D4AF37; color: #D4AF37;">Découvrir le club</a>
+                        </div>
+                    </article>
+                    <article class="secondary-card map-card">
+                        <h2>Nos Établissements</h2>
+                        <p>Retrouvez tous nos établissements à Cherbourg-en-Cotentin</p>
+                        <div id="map-etablissements" class="map-container"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Établissements Section -->
+        <section id="etablissements" class="etablissements-section">
+            <div class="container">
+                <h2 class="section-title">Nos Établissements</h2>
+                <div class="etablissements-grid">
+                    <!-- Vice City -->
+                    <article class="etablissement-card brand-vice stagger-item">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-vice-city.svg" alt="Le Vice City" class="etablissement-card-logo">
+                        </div>
+                        <p>Bar • Restaurant • Club</p>
+                        <a href="le-vice-city.html" class="view-link">Voir la page</a>
+                    </article>
+                    <!-- Le Cartel -->
+                    <article class="etablissement-card brand-cartel">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-cartel.svg" alt="Le Cartel" class="etablissement-card-logo">
+                        </div>
+                        <p>Restaurant • Bar à cocktails</p>
+                        <a href="le-cartel.html" class="view-link">Voir la page</a>
+                    </article>
+                    <!-- Mirage -->
+                    <article class="etablissement-card brand-mirage">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-mirage.svg" alt="Mirage" class="etablissement-card-logo">
+                        </div>
+                        <p>Lounge • Club</p>
+                        <a href="mirage.html" class="view-link">Voir la page</a>
+                    </article>
+                    <!-- Burgers de Colette -->
+                    <article class="etablissement-card brand-colette">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-burgers-colette.svg" alt="Les Burgers de Colette"
+                                class="etablissement-card-logo">
+                        </div>
+                        <p>Fast-Good • Burgers</p>
+                        <a href="burgers-de-colette.html" class="view-link">Voir la page</a>
+                    </article>
+                    <!-- Madame -->
+                    <article class="etablissement-card brand-madame">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-madame.svg" alt="Madame" class="etablissement-card-logo">
+                        </div>
+                        <p>Restaurant Gastronomique</p>
+                        <a href="madame.html" class="view-link">Voir la page</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news-section container">
+            <div class="section-header">
+                <h2>Actualités</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-item stagger-item" id="ouvertures">
+                    <div class="news-image" style="background-image: url('assets/news_opening.png');"></div>
+                    <div class="news-content">
+                        <span class="category">Ouvertures</span>
+                        <h3>Restez informés de nos nouvelles ouvertures</h3>
+                    </div>
+                </article>
+                <article class="news-item stagger-item" id="evenements">
+                    <div class="news-image" style="background-image: url('assets/news_rse.png');"></div>
+                    <div class="news-content">
+                        <span class="category">Événements</span>
+                        <h3>DJ Sets, Festivals, Soirées à thème...</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Engagements Section -->
+        <section id="engagements" class="engagements-section">
+            <div class="container text-center">
+                <h2>Nos Engagements</h2>
+                <div class="engagements-grid">
+                    <div class="engagement-item stagger-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 1.44S9.22 5 7 5a4.91 4.91 0 0 0-5 4.78c0 4.22 3 12.22 6 12.22 1.25 0 2.5-1.06 4-1.06Z">
+                                </path>
+                                <path d="M10 2c1 .5 2 2 2 5"></path>
+                            </svg>
+                        </span>
+                        <h4>Produits Frais</h4>
+                    </div>
+                    <div class="engagement-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                </path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </span>
+                        <h4>Fournisseurs Locaux</h4>
+                    </div>
+                    <div class="engagement-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </span>
+                        <h4>Vie Locale</h4>
+                    </div>
+                    <div class="engagement-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </span>
+                        <h4>Valeurs du Service</h4>
+                    </div>
+                    <div class="engagement-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </span>
+                        <h4>Dynamique Centre-Ville</h4>
+                    </div>
+                    <div class="engagement-item">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.46.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                        </span>
+                        <h4>Sport Club</h4>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+        </section>
+
+        <!-- Recrutement Section -->
+        <section id="recrutement" class="recrutement-section">
+            <div class="container">
+                <h2>Rejoignez-nous</h2>
+                <p>Maison Rivage recrute des talents passionnés</p>
+                <div class="recrutement-actions">
+                    <a href="mailto:rh@maisonrivage.fr" class="btn btn-primary">Envoyer votre CV</a>
+                    <a href="#postes" class="btn btn-primary">Voir les postes</a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand & Info -->
+                <div class="footer-col brand-col">
+                    <h4>Maison Rivage</h4>
+                    <p class="address">11B Rue Boël Meslin<br>50100 Cherbourg-en-Cotentin<br>France</p>
+                    <div class="footer-divider"></div>
+                    <p class="copyright">© 2024 Groupe Maison Rivage.<br>Tous droits réservés.</p>
+                </div>
+
+                <!-- Col 2: Etablissements (New Info) -->
+                <div class="footer-col link-col">
+                    <h4>Nos Établissements</h4>
+                    <ul>
+                        <li><a href="le-vice-city.html">Le Vice City</a></li>
+                        <li><a href="le-cartel.html">Le Cartel</a></li>
+                        <li><a href="mirage.html">Mirage</a></li>
+                        <li><a href="madame.html">Madame</a></li>
+                        <li><a href="burgers-de-colette.html">Les Burgers de Colette</a></li>
+                        <li><a href="sport-club.html">Rivage Sport Club</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Navigation -->
+                <div class="footer-col link-col">
+                    <h4>Groupe</h4>
+                    <ul>
+                        <li><a href="#recrutement">Carrières & Talents</a></li>
+                        <li><a href="#contact">Contact Direction</a></li>
+                        <li><a href="#news">Actualités</a></li>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Politique de Confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Social & Connect -->
+                <div class="footer-col social-col">
+                    <h4>Réseaux Sociaux</h4>
+                    <div class="social-grid-display">
+
+                        <div class="social-block">
+                            <span class="block-title">Groupe</span>
+                            <div class="icons">
+                                <a href="#" aria-label="Maison Rivage Instagram"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a>
+                                <a href="#" aria-label="Maison Rivage LinkedIn"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg></a>
+                            </div>
+                        </div>
+
+                        <div class="social-block">
+                            <span class="block-title">Restaurants & Bars</span>
+                            <div class="icons">
+                                <a href="#" title="Le Vice City"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg></a>
+                                <a href="#" title="Le Cartel"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a>
+                                <a href="#" title="Madame"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a>
+                            </div>
+                        </div>
+
+                        <div class="social-block">
+                            <span class="block-title">Nightlife & Sport</span>
+                            <div class="icons">
+                                <a href="#" title="Mirage"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                    </svg></a>
+                                <a href="#" title="Sport Club"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15.387 17.944l-2.089-4.116h-3.065l5.154 8.172 5.154-8.172h-3.065z">
+                                        </path>
+                                        <path d="M9.46 10.056l-1.268-2.244h-1.859l3.127 5.031 3.127-5.031h-1.859z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Direction et équipes à votre service</p>
+            <div class="contact-grid">
+                <div class="contact-actions-grid">
+                    <a href="#trombinoscope" class="btn btn-primary contact-btn">Trombinoscope</a>
+                    <a href="#carrieres" class="btn btn-primary contact-btn">Carrières</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.getElementById('map-etablissements')) {
+                const map = L.map('map-etablissements', {
+                    scrollWheelZoom: false
+                }).setView([49.6385, -1.6165], 16);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                    maxZoom: 19
+                }).addTo(map);
+
+                // Custom gold marker
+                const goldIcon = L.divIcon({
+                    className: 'custom-marker',
+                    html: '<div style="background: linear-gradient(135deg, #D4AF37, #B8860B); width: 24px; height: 24px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12]
+                });
+
+                // Établissements markers
+                const etablissements = [
+                    {
+                        name: 'Le Vice City',
+                        coords: [49.6387, -1.6161],
+                        address: '11B Rue Boël Meslin',
+                        type: 'Bar • Restaurant • Club'
+                    },
+                    {
+                        name: 'Mirage',
+                        coords: [49.6389, -1.6159],
+                        address: '9 Rue Boël Meslin',
+                        type: 'Lounge • Club'
+                    },
+                    {
+                        name: 'Le Cartel',
+                        coords: [49.6402, -1.6175],
+                        address: '8 Place de la Fontaine',
+                        type: 'Restaurant • Cocktails'
+                    }
+                ];
+
+                etablissements.forEach(function (etab) {
+                    L.marker(etab.coords, { icon: goldIcon })
+                        .addTo(map)
+                        .bindPopup('<strong>' + etab.name + '</strong><br>' + etab.type + '<br><small>' + etab.address + '</small>');
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
+```

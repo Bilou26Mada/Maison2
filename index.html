@@ -54,11 +54,12 @@
                     <li class="has-dropdown">
                         <a href="#etablissements">ÉTABLISSEMENTS</a>
                         <ul class="dropdown">
-                            <li><a href="le-vice-city.html">Le Vice City</a></li>
-                            <li><a href="le-cartel.html">Le Cartel</a></li>
-                            <li><a href="mirage.html">Mirage</a></li>
-                            <li><a href="burgers-de-colette.html">Les Burgers de Colette</a></li>
-                            <li><a href="madame.html">Madame</a></li>
+                            <li class="nav-brand-vice"><a href="le-vice-city.html">Le Vice City</a></li>
+                            <li class="nav-brand-cartel"><a href="le-cartel.html">Le Cartel</a></li>
+                            <li class="nav-brand-mirage"><a href="mirage.html">Mirage</a></li>
+                            <li class="nav-brand-colette"><a href="burgers-de-colette.html">Les Burgers de Colette</a>
+                            </li>
+                            <li class="nav-brand-madame"><a href="madame.html">Madame</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -87,8 +88,72 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <h1 class="fade-in-up">Maison Rivage</h1>
-                <p class="fade-in-up delay-1">L'art de recevoir à Cherbourg-en-Cotentin</p>
+                <!-- Logo Replacement (Official Vector) -->
+                <div class="hero-logo-container fade-in-up">
+                    <svg class="official-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 732.28 323.53">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #333332;
+                                }
+
+                                .cls-2 {
+                                    fill: #fff;
+                                }
+
+                                .cls-3 {
+                                    fill: #232770;
+                                }
+
+                                .cls-4 {
+                                    fill: #ff78c1;
+                                }
+
+                                .cls-5 {
+                                    fill: #ff5961;
+                                }
+
+                                .cls-6 {
+                                    fill: #247d40;
+                                }
+                            </style>
+                        </defs>
+                        <g>
+                            <g>
+                                <path class="cls-2"
+                                    d="M66.13,207.39c15.92-4.27,34.9-15.64,34.9-45.58,0-25.68-18.54-43.61-45.09-43.61H0v156.93h29.2v-65.25l1.74.08c.41.03.69,0,.97-.03.31-.03.64-.06,1.07-.06h.89l43.36,65.25h37.01l-50.49-67.1,2.37-.64ZM38.72,191.31c-2.75,0-5.6,0-8.02-.22l-1.51-.14v-49.72h15.69c15.94,0,25.46,8.57,25.46,22.92,0,18.03-10.64,27.17-31.62,27.17Z" />
+                                <rect class="cls-2" x="132.46" y="118.2" width="29.2" height="156.93" />
+                                <polygon class="cls-2"
+                                    points="297.89 118.2 256.45 217.94 253.6 217.94 211.94 118.2 179.24 118.2 247.51 275.13 261.69 275.13 329.75 118.2 297.89 118.2" />
+                                <path class="cls-2"
+                                    d="M358.22,118.2l-69.3,156.93h29.51l14.03-32.55h66.61l13.18,32.55h30.39l-65.77-156.93h-18.64ZM341.89,219.62l23.28-55.49h2.65l22.15,55.49h-48.09Z" />
+                                <path class="cls-2"
+                                    d="M526.1,192.38v22.82h42.49l-.21,1.85c-2.44,21.72-20.61,36.32-45.22,36.32-30.4,0-52.46-23.04-52.46-54.79,0-34.3,20.82-57.35,51.82-57.35,18.29,0,33.64,9.09,43.38,25.63l25.47-12.54c-15.02-24.73-40.1-38.87-69.06-38.87-47.93,0-82.71,34.87-82.71,82.92s34.16,79.53,81.23,79.53c24.07,0,44.36-8.04,58.68-23.25,14.63-15.54,21.7-37.04,20.51-62.27h-73.92Z" />
+                                <polygon class="cls-2"
+                                    points="703.78 142.94 703.78 118.2 621.03 118.2 621.03 275.13 703.78 275.13 703.78 250.4 650.22 250.4 650.22 205.21 700.8 205.21 700.8 181.54 650.22 181.54 650.22 142.94 703.78 142.94" />
+                            </g>
+                            <g>
+                                <path class="cls-2"
+                                    d="M227.42,66.53h8.75c4.47,0,5.1.94,5.1,4.53v26.38h7.77v-30.91h8.75c4.46,0,5.16.94,5.16,4.53v26.38h39.37c2.66-.61,5.01-1.94,6.44-3.68v3.68h75.26c2.66-.61,5.01-1.94,6.44-3.68v3.68h71.52v-30.91h9.22c4.46,0,5.1.94,5.1,4.53v26.38h14.43v-5.48h-6.66v-20.95c0-6.71-3.88-10.95-11.71-10.95-4.41,0-7.88,1.53-10.55,4.36v-3.88h-14.2v5.53h6.66v25.9h-19.12c.93-1.69,1.54-3.6,1.54-5.89v-14.06c0-7.83-5.56-12.36-15.93-12.36s-15.88,4.53-15.88,12.36v14.06c0,2.28.62,4.19,1.55,5.89h-15.17c.62-1.31.96-2.78.96-4.42v-.65c0-6.77-3.88-8.77-13.44-11.24-8.46-2.12-9.85-2.76-9.85-5.59v-1.65c0-2.23.87-3.12,5.22-3.12h9.85v7.65h7.65v-3.82c0-6.18-4.63-9.47-14.72-9.47s-15.42,4.12-15.42,10.77v.65c0,6.77,3.82,8.71,13.39,11.18,8.52,2.11,9.85,2.76,9.85,5.65v1.65c0,2.35-.87,3.24-5.33,3.24h-10.2v-7.77h-7.65v3.82c0,1.15.2,2.17.51,3.12h-16.58v-31.43h-14.37v5.53h6.66v25.86h-21.58v-21.47c0-6.65-5.42-10.84-15.13-10.84s-14.31,3.58-14.31,9.51v3.89h7.57v-7.57h9.2c3.68,0,5.01.82,5.01,3.99v3.27l-14.01,4.29c-7.67,2.35-8.79,5.01-8.79,10.53v.51c0,1.43.2,2.76.61,3.88,0,.02.02.02.02.04h-15.74v-20.95c0-6.71-3.88-10.95-11.82-10.95-4.35,0-7.94,1.59-10.66,4.48-1.97-2.83-5.45-4.48-10.32-4.48-4.46,0-7.94,1.53-10.61,4.36v-3.88h-14.2v5.53h6.66v25.9h-6.66v5.48h14.37v-30.91ZM412.54,70.18c0-3.53,1.45-4.71,5.8-4.71h4.93c4.35,0,5.8,1.18,5.8,4.71v17.72c0,3.53-1.45,4.71-5.8,4.71h-4.93c-4.35,0-5.8-1.18-5.8-4.71v-17.72ZM293.53,86.19c0-2.35.72-3.37,4.29-4.4l10.74-3.27v13.6h-10.02c-4.19,0-5.01-1.02-5.01-3.88v-2.05Z" />
+                                <rect class="cls-2" x="337.22" y="50.1" width="8.23" height="5.87" />
+                            </g>
+                            <path class="cls-2"
+                                d="M725.17,135.69c-2.26,0-4.02-.74-5.25-2.24-1.24-1.49-1.86-3.6-1.86-6.32s.62-5.03,1.86-6.59c1.24-1.56,2.99-2.34,5.25-2.34s4.02.78,5.25,2.34,1.86,3.76,1.86,6.59-.62,4.83-1.86,6.32c-1.24,1.49-2.99,2.24-5.25,2.24ZM725.17,133.75c1.59,0,2.83-.58,3.7-1.74.87-1.16,1.31-2.79,1.31-4.88,0-2.22-.44-3.94-1.31-5.16-.87-1.22-2.11-1.83-3.7-1.83s-2.83.61-3.7,1.83c-.87,1.22-1.31,2.94-1.31,5.16,0,2.1.44,3.72,1.31,4.88.87,1.16,2.11,1.74,3.7,1.74ZM722.05,130.89v-7.98h1.99v7.98h-1.99ZM723.86,128.33v-1.64h1.91c.36,0,.64-.1.84-.28.2-.19.3-.45.3-.79s-.1-.61-.3-.79c-.2-.18-.48-.28-.84-.28h-2.16v-1.64h2.16c.96,0,1.7.23,2.22.69.52.46.78,1.14.78,2.01s-.26,1.5-.78,1.98c-.52.48-1.26.72-2.22.72h-1.91ZM726.62,130.89l-1.41-2.67,1.91-.34,1.82,3.01h-2.32Z" />
+                        </g>
+                        <g>
+                            <path class="cls-3"
+                                d="M323.63,9.29L314.35.01l-9.28,9.28v11.9c5.67-2.84,12.6-2.76,18.17.3h0c.13.07.27.12.4.19v-12.39h-.01Z" />
+                            <path class="cls-6"
+                                d="M388.58.01l-9.26,9.26h.01v12.39c.12-.06.24-.1.36-.17h0c5.57-3.06,12.5-3.14,18.17-.3v-11.9L388.58.01Z" />
+                            <path class="cls-5"
+                                d="M332.94,0l-9.29,9.29v12.39c5.71,2.97,12.77,2.92,18.41-.19h0s.09-.04.13-.06c0,0,.01,0,.02,0v-12.13l-9.27-9.29Z" />
+                            <path class="cls-4"
+                                d="M379.31,9.28l-9.25-9.28-9.29,9.29-.02,12.14s.09.04.13.06h0c5.66,3.11,12.74,3.16,18.46.17v-12.37h-.01Z" />
+                            <path class="cls-1"
+                                d="M351.5,0l-9.29,9.29v12.13c5.71-3.08,12.83-3.07,18.54,0h0s.02-12.14.02-12.14l-9.27-9.29Z" />
+                        </g>
+                    </svg>
+                </div>
 
                 <div class="stats fade-in-up delay-2">
                     <div class="stat-item">
@@ -183,29 +248,45 @@
             <div class="container">
                 <h2 class="section-title">Nos Établissements</h2>
                 <div class="etablissements-grid">
-                    <article class="etablissement-card stagger-item">
-                        <h3>Le Vice City</h3>
+                    <!-- Vice City -->
+                    <article class="etablissement-card brand-vice stagger-item">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-vice-city.svg" alt="Le Vice City" class="etablissement-card-logo">
+                        </div>
                         <p>Bar • Restaurant • Club</p>
                         <a href="le-vice-city.html" class="view-link">Voir la page</a>
                     </article>
-                    <article class="etablissement-card">
-                        <h3>Le Cartel</h3>
+                    <!-- Le Cartel -->
+                    <article class="etablissement-card brand-cartel">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-cartel.svg" alt="Le Cartel" class="etablissement-card-logo">
+                        </div>
                         <p>Restaurant • Bar à cocktails</p>
                         <a href="le-cartel.html" class="view-link">Voir la page</a>
                     </article>
-                    <article class="etablissement-card">
-                        <h3>Mirage</h3>
+                    <!-- Mirage -->
+                    <article class="etablissement-card brand-mirage">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-mirage.svg" alt="Mirage" class="etablissement-card-logo">
+                        </div>
                         <p>Lounge • Club</p>
                         <a href="mirage.html" class="view-link">Voir la page</a>
                     </article>
-                    <article class="etablissement-card">
-                        <h3>Les Burgers de Colette</h3>
+                    <!-- Burgers de Colette -->
+                    <article class="etablissement-card brand-colette">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-burgers-colette.svg" alt="Les Burgers de Colette"
+                                class="etablissement-card-logo">
+                        </div>
                         <p>Fast-Good • Burgers</p>
                         <a href="burgers-de-colette.html" class="view-link">Voir la page</a>
                     </article>
-                    <article class="etablissement-card">
-                        <h3>Madame</h3>
-                        <p>Restaurant gastronomique</p>
+                    <!-- Madame -->
+                    <article class="etablissement-card brand-madame">
+                        <div class="card-logo-wrapper">
+                            <img src="assets/logo-madame.svg" alt="Madame" class="etablissement-card-logo">
+                        </div>
+                        <p>Restaurant Gastronomique</p>
                         <a href="madame.html" class="view-link">Voir la page</a>
                     </article>
                 </div>
@@ -329,7 +410,7 @@
                 <p>Maison Rivage recrute des talents passionnés</p>
                 <div class="recrutement-actions">
                     <a href="mailto:rh@maisonrivage.fr" class="btn btn-primary">Envoyer votre CV</a>
-                    <a href="#postes" class="btn btn-outline">Voir les postes</a>
+                    <a href="#postes" class="btn btn-primary">Voir les postes</a>
                 </div>
             </div>
         </section>
@@ -457,13 +538,9 @@
             <h2>Contact</h2>
             <p>Direction et équipes à votre service</p>
             <div class="contact-grid">
-                <div class="contact-item">
-                    <h4>Trombinoscope</h4>
-                    <p>Découvrez notre équipe de direction</p>
-                </div>
-                <div class="contact-item">
-                    <h4>Carrières</h4>
-                    <p>Postes de direction par domaine d'activité</p>
+                <div class="contact-actions-grid">
+                    <a href="#trombinoscope" class="btn btn-primary contact-btn">Trombinoscope</a>
+                    <a href="#carrieres" class="btn btn-primary contact-btn">Carrières</a>
                 </div>
             </div>
         </div>
