@@ -1686,6 +1686,11 @@ section {
         overflow: hidden;
         /* Contain zoom effect */
     }
+
+    .activities-section-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 
