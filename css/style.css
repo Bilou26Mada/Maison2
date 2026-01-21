@@ -1698,6 +1698,11 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .secondary-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 
