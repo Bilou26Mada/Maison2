@@ -1691,6 +1691,13 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .engagements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 per row looks better for icons? Or 1? Let's go 1 as requested imply stacking */
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 
