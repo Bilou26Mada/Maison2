@@ -1703,6 +1703,12 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .secondary-card {
+        text-align: center;
+        padding: 2rem;
+        /* Reduce padding slightly for mobile? */
+    }
 }
 
 
