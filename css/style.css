@@ -1211,10 +1211,41 @@ section {
     font-size: 0.8rem;
     color: var(--text-secondary);
     letter-spacing: 0.05em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     flex-grow: 1;
     /* Pushes button down */
     text-transform: uppercase;
+}
+
+.card-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.card-socials a {
+    color: var(--text-secondary);
+    /* Default off-white/grey */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-socials a:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Hovering the CARD makes the social icons brand colored on hover */
+.etablissement-card:hover .card-socials a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.etablissement-card:hover .card-socials a:hover {
+    color: var(--brand-color, var(--white));
 }
 
 .view-link {
