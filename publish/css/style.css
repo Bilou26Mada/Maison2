@@ -907,6 +907,22 @@ section {
     .footer-bottom p {
         font-size: 0.7rem;
     }
+
+    .etablissements-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-actions-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1533,6 +1549,145 @@ section {
         justify-content: center;
     }
 }
+
+/* ============================================
+   MOBILE RESPONSIVENESS & NAVIGATION
+   ============================================ */
+
+@media (max-width: 900px) {
+
+    /* Ensure Header adjusts */
+    .header-container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Show Hamburger Menu */
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* Mobile Navigation Overlay */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(5, 5, 5, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        pointer-events: none;
+    }
+
+    /* Active State (toggled by JS) */
+    .main-nav.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 1.5rem;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Fix Grid Stacking */
+    .etablissements-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .contact-actions-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Adjust Typography */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title,
+    .recrutement-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    /* Hide specific desktop-only interactions if needed */
+    .has-dropdown>a::after {
+        display: none;
+    }
+
+    /* Ensure dropdowns are visible/listed in mobile flow or simplifed */
+    .dropdown {
+        position: static;
+        /* Stack naturally */
+        background: transparent;
+        border: none;
+        padding: 0;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        display: none;
+        /* Hidden by default until clicked? or always show? */
+        /* For simplicity in this v1 check, let's keep them listed or flatten them */
+    }
+
+    /* For now, just show sub-items smaller */
+    .has-dropdown .dropdown {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .dropdown a {
+        font-size: 1rem;
+        opacity: 0.7;
+    }
+
+    /* Overflow Protection */
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    .map-container {
+        max-width: 100%;
+    }
+
+    .hero-section {
+        overflow: hidden;
+        /* Contain zoom effect */
+    }
+}
+
 
 /* ============================================
    ESTABLISHMENT LOGOS
