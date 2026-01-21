@@ -1581,8 +1581,16 @@ section {
         backdrop-filter: blur(10px);
         z-index: 1000;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        /* Ensure column flow */
+        justify-content: flex-start;
+        /* Start from top */
         align-items: center;
+        overflow-y: auto;
+        /* Allow scrolling */
+        padding-top: 80px;
+        /* Space for header/close button */
+        padding-bottom: 40px;
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s ease;
