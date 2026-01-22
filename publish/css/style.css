@@ -1673,7 +1673,15 @@ section {
     .etablissements-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 0 1.5rem;
+        padding: 0;
+        /* Let container handle padding */
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-actions-grid {
