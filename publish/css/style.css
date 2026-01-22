@@ -1781,6 +1781,12 @@ section {
     .secondary-card {
         text-align: center;
         padding: 2rem;
+        margin: 0;
+        /* Force no margin */
+        width: 100%;
+        /* Ensure full width */
+        box-sizing: border-box;
+        /* Include padding in width */
         /* Ensure background images are perfectly centered on mobile */
         background-position: 50% 50% !important;
     }
@@ -1796,8 +1802,9 @@ section {
     .map-container {
         width: 100%;
         max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0;
+        /* Reset margins */
+        box-sizing: border-box;
     }
 }
 
