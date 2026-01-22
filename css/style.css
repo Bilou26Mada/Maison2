@@ -1812,11 +1812,41 @@ section {
     }
 
     .map-container {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        /* Reset margins */
-        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        /* Fix Leaflet on iOS Safari */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* iOS Safari specific fix for Map Card */
+    .map-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        box-sizing: border-box !important;
+        /* Force hardware acceleration for iOS */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    /* Ensure Leaflet container doesn't overflow */
+    .map-card .map-container,
+    .map-card #map-etablissements {
+        width: 100% !important;
+        max-width: calc(100vw - 3rem) !important;
+        margin: 0 auto !important;
+    }
+
+    /* Fix Leaflet tiles alignment on iOS */
+    .leaflet-container {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
