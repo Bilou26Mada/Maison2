@@ -1492,7 +1492,8 @@ section {
     width: 30px;
     height: 1px;
     background-color: var(--accent);
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
+    /* Center horizontally */
     opacity: 0.5;
 }
 
