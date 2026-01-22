@@ -1778,21 +1778,25 @@ section {
     }
 
     .secondary-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        /* Force responsive column */
         gap: 2rem;
         padding: 0;
         /* Reset padding to align with container */
         width: 100%;
+        max-width: 100%;
+        /* Prevent overflow */
         margin: 0 auto;
     }
 
     .secondary-card {
         text-align: center;
         padding: 3rem 2rem;
-        margin: 0;
-        /* Force no margin */
+        margin: 0 auto;
+        /* Center card within grid cell */
         width: 100%;
-        /* Ensure full width */
+        max-width: 100%;
+        /* Prevent card from exceeding container */
         box-sizing: border-box;
         /* Include padding in width */
         /* Ensure background images are perfectly centered on mobile */
