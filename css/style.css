@@ -1774,6 +1774,8 @@ section {
     .secondary-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0;
+        /* Reset padding to align with container */
     }
 
     .secondary-card {
