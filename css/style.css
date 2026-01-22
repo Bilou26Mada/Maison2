@@ -1771,11 +1771,19 @@ section {
         gap: 2rem;
     }
 
+    .secondary-section {
+        padding: 4rem 0;
+        overflow: hidden;
+        /* Prevent overflow issues */
+    }
+
     .secondary-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 0;
         /* Reset padding to align with container */
+        width: 100%;
+        margin: 0 auto;
     }
 
     .secondary-card {
