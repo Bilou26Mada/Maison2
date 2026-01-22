@@ -1771,44 +1771,59 @@ section {
         gap: 2rem;
     }
 
+    /* =============================================
+       SECONDARY SECTION - MOBILE FIX (Android/iOS)
+       ============================================= */
     .secondary-section {
-        padding: 4rem 0;
-        overflow: hidden;
-        /* Prevent overflow issues */
+        padding: 2rem 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .secondary-section>.container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .secondary-grid {
-        grid-template-columns: 1fr !important;
-        /* Force responsive column */
-        gap: 2rem;
-        padding: 0;
-        /* Reset padding to align with container */
-        width: 100%;
-        max-width: 100%;
-        /* Prevent overflow */
-        margin: 0 auto;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .secondary-card {
-        text-align: center;
-        padding: 3rem 2rem;
-        margin: 0 auto;
-        /* Center card within grid cell */
-        width: 100%;
-        max-width: 100%;
-        /* Prevent card from exceeding container */
-        box-sizing: border-box;
-        /* Include padding in width */
-        /* Ensure background images are perfectly centered on mobile */
-        background-position: 50% 50% !important;
+        text-align: center !important;
+        padding: 3rem 1.5rem !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        background-position: center center !important;
+        /* Remove any transform that could cause offset */
+        transform: none !important;
+        left: 0 !important;
+        right: 0 !important;
     }
 
     .sports-club-card {
-        /* Robust Mobile Centering */
-        background-position: 50% 50% !important;
+        background-position: center center !important;
         background-attachment: scroll !important;
-        /* Fix for some mobile browsers */
         background-size: cover !important;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
     .map-container {
