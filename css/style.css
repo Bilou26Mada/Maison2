@@ -19,6 +19,17 @@
     /* Slower, smoother luxury feel */
 }
 
+/* Smooth Scroll Navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* Global Texture Overlay */
 body::before {
     content: "";
@@ -1961,4 +1972,187 @@ section {
 
 .dropdown li.nav-brand-madame a:hover {
     color: #ff5961 !important;
+}
+
+/* ============================================
+   PREMIUM ANIMATIONS & EFFECTS
+   ============================================ */
+
+/* Scroll Reveal - Fade In Up */
+section,
+.activity-card,
+.etablissement-card,
+.secondary-card,
+.news-item,
+.engagement-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+section.is-visible,
+.activity-card.is-visible,
+.etablissement-card.is-visible,
+.secondary-card.is-visible,
+.news-item.is-visible,
+.engagement-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Items Animation */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.stagger-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Fade-in Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-up.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.fade-in-up.delay-2 {
+    animation-delay: 0.3s;
+}
+
+.fade-in-up.delay-3 {
+    animation-delay: 0.5s;
+}
+
+.fade-in-up.delay-4 {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Premium Card Hover Effects */
+.activity-card,
+.etablissement-card,
+.secondary-card {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease !important;
+}
+
+/* Subtle Glow on Hover */
+.activity-card:hover,
+.secondary-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(212, 175, 55, 0.08);
+}
+
+/* Golden Line Decoration Animation */
+.section-title::after,
+.etablissement-card h3::after {
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.3s ease;
+}
+
+/* Image Zoom on Hover (very subtle) */
+.activity-card::before,
+.news-image {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-card:hover::before {
+    transform: scale(1.05);
+}
+
+.news-item:hover .news-image {
+    transform: scale(1.03);
+}
+
+/* Button Shine Effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.15),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Logo Subtle Pulse on Load */
+.hero-logo-container {
+    animation: subtlePulse 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes subtlePulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.2));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.35));
+    }
+}
+
+/* Cursor Pointer for Interactive Elements */
+.activity-card,
+.etablissement-card,
+.secondary-card,
+.btn,
+.view-link,
+.card-socials a,
+.footer-icons a {
+    cursor: pointer;
+}
+
+/* Respect Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    section,
+    .activity-card,
+    .etablissement-card,
+    .secondary-card,
+    .news-item,
+    .engagement-item,
+    .stagger-item {
+        opacity: 1;
+        transform: none;
+    }
 }

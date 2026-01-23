@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Intersection Observer for Scroll Animations with Staggering
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px" // Trigger slightly before element is in view
+        threshold: 0.1,
+        rootMargin: "0px 0px -80px 0px" // Trigger slightly before element is in view
     };
 
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -73,6 +73,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe sections and containers
     document.querySelectorAll('section, .activities-section-grid, .etablissements-grid, .news-grid, .engagements-grid, .footer-grid').forEach(el => {
         sectionObserver.observe(el);
+    });
+
+    // 2. Individual Cards Observer (for staggered card reveal)
+    const cardObserverOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add a small delay based on element's index in viewport
+                setTimeout(() => {
+                    entry.target.classList.add('is-visible');
+                }, index * 80);
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, cardObserverOptions);
+
+    // Observe individual cards
+    document.querySelectorAll('.activity-card, .etablissement-card, .secondary-card, .news-item, .engagement-item').forEach(el => {
+        cardObserver.observe(el);
     });
 
     // 2. Parallax Effect for Background Images (Subtle & Smooth)
