@@ -199,6 +199,12 @@ ul {
     z-index: 0;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.hero-video.loaded {
+    opacity: 1;
 }
 
 .hero-overlay {
