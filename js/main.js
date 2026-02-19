@@ -115,6 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- CAROUSEL LOGIC REMOVED (Video Background Implemented) ---
+    // --- VIDEO FADE-IN ON LOAD ---
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.addEventListener('canplaythrough', () => {
+            heroVideo.classList.add('loaded');
+        });
+        // Fallback: if event already fired before listener was attached
+        if (heroVideo.readyState >= 4) {
+            heroVideo.classList.add('loaded');
+        }
+    }
 
 });
