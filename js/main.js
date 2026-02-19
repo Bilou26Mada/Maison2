@@ -115,67 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- CAROUSEL LOGIC ---
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.control.prev');
-    const nextBtn = document.querySelector('.control.next');
-    let currentSlide = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-        // Wrap around
-        if (index >= slides.length) currentSlide = 0;
-        else if (index < 0) currentSlide = slides.length - 1;
-        else currentSlide = index;
-
-        // Update slides
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[currentSlide].classList.add('active');
-
-        // Update dots
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentSlide].classList.add('active');
-    }
-
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
-
-    function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 5000); // 5 seconds
-    }
-
-    function stopSlideShow() {
-        clearInterval(slideInterval);
-    }
-
-    // Event Listeners
-    if (nextBtn) nextBtn.addEventListener('click', () => {
-        stopSlideShow();
-        nextSlide();
-        startSlideShow();
-    });
-
-    if (prevBtn) prevBtn.addEventListener('click', () => {
-        stopSlideShow();
-        prevSlide();
-        startSlideShow();
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            stopSlideShow();
-            showSlide(index);
-            startSlideShow();
-        });
-    });
-
-    // Start auto-play
-    startSlideShow();
+    // --- CAROUSEL LOGIC REMOVED (Video Background Implemented) ---
 
 });

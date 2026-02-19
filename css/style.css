@@ -177,7 +177,7 @@ ul {
     transition: var(--transition);
 }
 
-/* Hero Section (Carousel) */
+/* Hero Section (Video) */
 .hero-section {
     height: 100vh;
     position: relative;
@@ -188,38 +188,27 @@ ul {
     overflow: hidden;
 }
 
-.hero-carousel,
-.hero-overlay {
+.hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
-.slide {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out, transform 8s ease-out;
-    /* Zoom effect */
-    transform: scale(1.1);
-}
-
-.slide.active {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.hero-overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 .hero-content {
@@ -318,51 +307,7 @@ ul {
     opacity: 0.8;
 }
 
-/* Carousel Controls */
-.carousel-controls {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
 
-.control {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-}
-
-.control:hover {
-    opacity: 1;
-}
-
-.indicators {
-    display: flex;
-    gap: 1rem;
-}
-
-.dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--white);
-    border-radius: 50%;
-    opacity: 0.3;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.dot.active {
-    opacity: 1;
-    transform: scale(1.5);
-}
 
 /* Luxury Buttons */
 .btn {

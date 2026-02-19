@@ -80,10 +80,10 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
-            <div class="hero-carousel">
-                <div class="slide active" style="background-image: url('assets/hero_food.png');"></div>
-                <div class="slide" style="background-image: url('assets/hero_interior.png');"></div>
-            </div>
+            <video class="hero-video" autoplay muted loop playsinline poster="assets/hero_food.png">
+                <source src="assets/background-720p.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
             <div class="hero-overlay"></div>
 
@@ -166,15 +166,6 @@
                     </div>
                 </div>
                 <a href="#activities" class="btn btn-primary fade-in-up delay-3">Découvrir nos activités</a>
-            </div>
-
-            <div class="carousel-controls">
-                <button class="control prev" aria-label="Previous Slide">&larr;</button>
-                <div class="indicators">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                </div>
-                <button class="control next" aria-label="Next Slide">&rarr;</button>
             </div>
         </section>
 
